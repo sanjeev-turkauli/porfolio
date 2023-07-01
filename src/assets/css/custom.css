@@ -1,18 +1,61 @@
-.showImage{
-    position: relative;
-    width: 100%;
-    height: 100%;
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/plant.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.showImage::after{
-    content: "";
-    width: 800px;
-    height: 800px;
-    background-color: gainsboro;
-    position: absolute;
-    right: -20%;
-    bottom: -20%;
-    border-radius: 50%;
-    clip-path: circle(72.8% at 85% 84%);
-
+.officail{
+    position: fixed;
+    top: 3%;
+    right: 5%;
 }
+
+.mainHeading{
+    margin: 0 0 10px 0;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .officail{
+        right: 85%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .officail{
+        right: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .officail{
+        right: 70%;
+    }
+    .mainHeading{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .officail{
+        right: 60%;
+    }
+    .mainHeading{
+        font-size: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 380px) {
+    .mainHeading{
+        font-size: 35px;
+    }
+}
+
