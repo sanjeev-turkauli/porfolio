@@ -47,32 +47,32 @@ const PageHeader = (props) => {
           <nav id="navbar" class="nav-menu navbar">
             <ul>
               <li>
-                <NavLink to={`/`} class="nav-link scrollto active">
+                <NavLink to={`/`} class="nav-link scrollto active" onClick={MobileNavHandle}>
                   <i class="bx bx-home"></i> <span>Home</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to={`/about`} class="nav-link scrollto">
+                <NavLink to={`/about`} class="nav-link scrollto" onClick={MobileNavHandle}>
                   <i class="bx bx-user"></i> <span>About</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink  to={`/resume`} class="nav-link scrollto">
+                <NavLink  to={`/resume`} class="nav-link scrollto" onClick={MobileNavHandle}>
                   <i class="bx bx-file-blank"></i> <span>Resume</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink  to={`/portfolio`} class="nav-link scrollto">
+                <NavLink  to={`/portfolio`} class="nav-link scrollto" onClick={MobileNavHandle}>
                   <i class="bx bx-book-content"></i> <span>Portfolio</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink  to={`/services`} class="nav-link scrollto">
+                <NavLink  to={`/services`} class="nav-link scrollto" onClick={MobileNavHandle}>
                   <i class="bx bx-server"></i> <span>Services</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink  to={`/contact`} class="nav-link scrollto">
+                <NavLink  to={`/contact`} class="nav-link scrollto" onClick={MobileNavHandle}>
                   <i class="bx bx-envelope"></i> <span>Contact</span>
                 </NavLink>
               </li>

@@ -1,9 +1,14 @@
 import React from "react";
+import AOS from 'aos';
+
 
 const FectSection = () => {
+
+  AOS.init();
+
   return (
     <>
-      <section id="facts" class="facts">
+      <section id="facts" class="facts" style={{padding:"20px 0px"}}>
         <div class="container">
           <div class="section-title">
             <h2>Facts</h2>
@@ -24,7 +29,7 @@ const FectSection = () => {
                 <i class="bi bi-emoji-smile"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="232"
+                  data-purecounter-end="30"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
@@ -43,7 +48,7 @@ const FectSection = () => {
                 <i class="bi bi-journal-richtext"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="521"
+                  data-purecounter-end="40"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
@@ -62,7 +67,7 @@ const FectSection = () => {
                 <i class="bi bi-headset"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="1453"
+                  data-purecounter-end="20"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
@@ -81,7 +86,7 @@ const FectSection = () => {
                 <i class="bi bi-people"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="32"
+                  data-purecounter-end="10"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>

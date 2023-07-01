@@ -1,9 +1,21 @@
-import React from "react";
+import React,{useEffect,useContext} from "react";
+import ProfileImage from '../../assets/img/profile-img.jpg';
+import FectSection from "./facts";
+import AOS from 'aos';
+import PureCounter from "@srexi/purecounterjs";
+import DataContext from '../../context/data/myState';
+
 
 const AboutSection = () => {
+  let data = useContext(DataContext);
+  useEffect(()=>{
+    new PureCounter();
+    AOS.init(); 
+  },[]);
+ 
   return (
     <>
-      <section id="about" class="about">
+      <section id="about" class="about" style={{padding:"20px 0px"}}>
         <div class="container">
           <div class="section-title">
             <h2>About</h2>
@@ -16,11 +28,11 @@ const AboutSection = () => {
           </div>
 
           <div class="row">
-            <div class="col-lg-4" data-aos="fade-right">
-              <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" />
+            <div class="col-lg-4"  style={{opacity: "1"}}>
+              <img src={`${ProfileImage}`} class="img-fluid" alt="" />
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>UI/UX Designer &amp; Web Developer.</h3>
+              <h3>Full Stack Developer  &amp; YouTuber.</h3>
               <p class="fst-italic">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -30,19 +42,19 @@ const AboutSection = () => {
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i>{" "}
-                      <strong>Birthday:</strong> <span>1 May 1995</span>
+                        <strong>Birthday:</strong> <span>{data.dob}</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>{" "}
-                      <strong>Website:</strong> <span>www.example.com</span>
+                      <strong>Website:</strong> <span><a href={data.webSite} target="_blank">{data.webSite}</a></span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>{" "}
-                      <strong>Phone:</strong> <span>+123 456 7890</span>
+                      <strong>Phone:</strong> <span>{data.phone}</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i> <strong>City:</strong>{" "}
-                      <span>New York, USA</span>
+                      <span>{data.city}</span>
                     </li>
                   </ul>
                 </div>
@@ -50,20 +62,20 @@ const AboutSection = () => {
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i> <strong>Age:</strong>{" "}
-                      <span>30</span>
+                      <span>{data.age}</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>{" "}
-                      <strong>Degree:</strong> <span>Master</span>
+                      <strong>Degree:</strong> <span>{data.degree}</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>{" "}
-                      <strong>PhEmailone:</strong>{" "}
-                      <span>email@example.com</span>
+                      <strong>Email:</strong>{" "}
+                      <span>{data.email}</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>{" "}
-                      <strong>Freelance:</strong> <span>Available</span>
+                      <strong>Freelance:</strong> <span>{data.freelance}</span>
                     </li>
                   </ul>
                 </div>
@@ -81,6 +93,8 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
+
+      <FectSection/>
     </>
   );
 };
